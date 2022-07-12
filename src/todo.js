@@ -9,11 +9,24 @@ const toDo = (title, description = "", notes = "", date, priority) => {
 };
 
 const objektet = toDo("EnTittel", "enBeskrivelse", "Notater", "dato", "Pri#1");
-console.log(objektet.title);
+console.log(objektet);
 
 objektet.title = "EnAnnenTittel";
 console.log(objektet.title);
 
+const tdbody = document.querySelector(".tdbody");
+//tdbody.appendChild(objektet.title);
+const stringobj = JSON.stringify(objektet);
+
+// const newarr = [];
+// for (const [key, value] of Object.entries(objektet)) {
+//   newarr.push(value + " ");
+//   let newarr1 = newarr.toString();
+//   newarr1 = newarr.replace(/,/g, "");
+//   tdbody.textContent = newarr1;
+// }
+//
+//tdbody.textContent = stringobj;
 // class ToDO {
 //   constructor(title, description, notes, date, priority) {
 //     this.title = title;
